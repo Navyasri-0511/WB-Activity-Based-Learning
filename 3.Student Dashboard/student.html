@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdf6fb;
+  color: #444;
+}
+.sidebar {
+  width: 180px;
+  height: 100vh;
+  background: #d9c7f5;
+  position: fixed;
+  padding: 20px;
+}
+.sidebar h2 { color: #68459b; }
+.sidebar a {
+  display: block;
+  padding: 12px;
+  color: #4b376b;
+  text-decoration: none;
+}
+.main {
+  margin-left: 220px;
+  padding: 25px;
+}
+.card {
+  background: white;
+  padding: 18px;
+  margin: 12px 0;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px #eadff0;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+h1, h3 { color: #8059ad; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+.bar {
+  background: #eee5f7;
+  border-radius: 10px;
+  height: 12px;
+}
+.fill {
+  background: #b99be8;
+  height: 12px;
+  border-radius: 10px;
+}
+@media(max-width:600px) {
+  .sidebar { width: 100px; padding: 10px; }
+  .main { margin-left: 120px; padding: 10px; }
+  .cards { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>🌸 Campus</h2>
+  <a href="#home">🏠 Home</a>
+  <a href="#results">📊 Results</a>
+  <a href="#attendance">📅 Attendance</a>
+  <a href="#exams">📝 Exams</a>
+  <a href="#news">📢 Notices</a>
+</div>
+
+<div class="main" id="home">
+  <h1>Hello, Student! 🌷</h1>
+  <p>Welcome to your student dashboard.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>👩‍🎓 Student Details</h3>
+      Name: Ananya<br>
+      Roll No: 102<br>
+      Branch: CSE<br>
+      Semester: 2
+    </div>
+
+    <div class="card" id="results">
+      <h3>⭐ Semester Results</h3>
+      SGPA: 8.7 / 10<br>
+      Status: Passed 🎉
+    </div>
+  </div>
+
+  <div class="card" id="attendance">
+    <h3>💜 Attendance</h3>
+    <p>Python - 90%</p>
+    <div class="bar"><div class="fill" style="width:90%"></div></div>
+    <p>Mathematics - 80%</p>
+    <div class="bar"><div class="fill" style="width:80%"></div></div>
+    <p>Computer Science - 95%</p>
+    <div class="bar"><div class="fill" style="width:95%"></div></div>
+  </div>
+
+  <div class="card">
+    <h3>📚 Subject Information</h3>
+    <table>
+      <tr><th>Subject</th><th>Code</th></tr>
+      <tr><td>Python</td><td>CS101</td></tr>
+      <tr><td>Mathematics</td><td>MA101</td></tr>
+      <tr><td>Computer Science</td><td>CS102</td></tr>
+    </table>
+  </div>
+
+  <div class="card" id="exams">
+    <h3>📝 Exam Schedule</h3>
+    <table>
+      <tr><th>Subject</th><th>Date</th></tr>
+      <tr><td>Python</td><td>10 Nov</td></tr>
+      <tr><td>Mathematics</td><td>13 Nov</td></tr>
+      <tr><td>Computer Science</td><td>16 Nov</td></tr>
+    </table>
+  </div>
+
+  <div class="card" id="news">
+    <h3>📢 Announcements</h3>
+    <p>🌼 Exams begin on 10 November.</p>
+    <p>🌼 Submit assignments before Friday.</p>
+    <p>🌼 College fest registrations are open!</p>
+  </div>
+</div>
+
+</body>
+</html>
